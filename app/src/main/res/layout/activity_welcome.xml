@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".WelcomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="25">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/title"
+            android:gravity="center"
+            android:autoSizeMinTextSize="40sp"
+            android:textColor="@android:color/black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:autoSizeMinTextSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="@string/set_passcode"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:id="@+id/insertSecretPasscodeLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/insertSecretPasscode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:digits="0123456789qwertzuiopasdfghjklyxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+                android:hint="Enter Passcode"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:id="@+id/confirmSecretPasscodeLayout"
+            android:layout_below="@id/insertSecretPasscodeLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmSecretPasscode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:digits="0123456789qwertzuiopasdfghjklyxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+                android:hint="Confirm Passcode"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/disclaimer"
+            android:layout_below="@id/confirmSecretPasscodeLayout"
+            android:layout_margin="20dp"
+            android:textColor="@android:color/darker_gray"
+            android:textAlignment="center"
+            android:autoSizeMinTextSize="15sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="40sp"
+            app:backgroundTint="@android:color/transparent"
+            app:cornerRadius="8dp"
+            android:layout_centerInParent="true"
+            app:rippleColor="#33AAAAAA"
+            android:paddingVertical="20sp"
+            android:paddingHorizontal="40sp"
+            android:enabled="false"
+            app:strokeColor="@android:color/holo_green_dark"
+            app:strokeWidth="4dp"
+            android:onClick="goToMain"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

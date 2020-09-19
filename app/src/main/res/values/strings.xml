@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">PasswordSaver</string>
+    <string name="title">PasswordSaver</string>
+    <string name="disclaimer">Your will not be able to change the passcode after setting it here. Be sure to remember it as you cannot retrieve your passwords without it.</string>
+    <string name="save">Save</string>
+    <string name="set_passcode">Set the passcode with which you will encrypt and decrypt your passwords:</string>
+    <string name="store_password">STORE A NEW PASSWORD</string>
+    <string name="retrieve_password">RETRIEVE A PASSWORD</string>
+    <string name="back">Back</string>
+    <string name="password">Password</string>
+    <string name="description">Description</string>
+    <string name="set_name_and_password">Set the name of the stored password, which will help you identify it when retrieving it and then type the password itself.</string>
+    <string name="name">Name</string>
+    <string name="store">Store</string>
+    <string name="disclaimer_store">Your password will be encrypted using your unique passcode and will then be stored under the name given. You can later decrypt it with your passcode to retrieve it.</string>
 </resources>
