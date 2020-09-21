@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="25">
+        android:layout_weight="20">
 
         <TextView
             android:layout_width="match_parent"
@@ -26,7 +26,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="35"
+        android:layout_weight="30"
         android:padding="20dp">
 
         <com.google.android.material.button.MaterialButton
@@ -53,7 +53,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="35"
+        android:layout_weight="30"
         android:padding="20dp">
 
         <com.google.android.material.button.MaterialButton
@@ -74,6 +74,33 @@
             app:strokeColor="#886451"
             app:strokeWidth="4dp"
             android:onClick="retrievePassword"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:padding="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/remove_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/remove_password"
+            android:textColor="#CCBA38"
+            android:textSize="30sp"
+            app:backgroundTint="@android:color/transparent"
+            app:cornerRadius="8dp"
+            android:layout_centerInParent="true"
+            app:rippleColor="#33AAAAAA"
+            android:paddingVertical="15sp"
+            android:paddingHorizontal="10sp"
+            android:enabled="false"
+            app:strokeColor="#CCBA38"
+            app:strokeWidth="4dp"
+            android:onClick="removePassword"/>
 
     </RelativeLayout>
 

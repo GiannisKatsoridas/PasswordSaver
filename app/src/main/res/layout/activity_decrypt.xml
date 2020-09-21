@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:background="@android:color/white"
+    tools:context=".DecryptActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/arrow_back_retrieve"
+            android:id="@+id/back_arrow_button_store"
+            android:onClick="goBack"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/back"
+            android:id="@+id/back_text_store"
+            android:autoSizeMinTextSize="20sp"
+            android:textSize="26sp"
+            android:textColor="#886451"
+            android:layout_toEndOf="@id/back_arrow_button_store"
+            android:gravity="center_vertical"
+            android:onClick="goBack"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/decrypt_name_tag"
+            android:gravity="start"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:autoSizeMinTextSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="@string/name"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/decrypt_name"
+            android:gravity="start"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="5dp"
+            android:autoSizeMinTextSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="@string/name"
+            android:layout_below="@id/decrypt_name_tag"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/decrypt_password_tag"
+            android:gravity="start"
+            android:layout_marginHorizontal="30dp"
+            android:autoSizeMinTextSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="@string/stored_password"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/decrypt_password"
+            android:gravity="start"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="5dp"
+            android:autoSizeMinTextSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="@string/password"
+            android:layout_below="@id/decrypt_password_tag"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:autoSizeMinTextSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="@string/use_your_key"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/storeKeyLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/decrypt_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/key"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/decrypt"
+            android:textColor="#886451"
+            android:textSize="30sp"
+            app:backgroundTint="@android:color/transparent"
+            app:cornerRadius="8dp"
+            android:layout_centerInParent="true"
+            app:rippleColor="#33AAAAAA"
+            android:paddingHorizontal="40sp"
+            android:enabled="false"
+            app:strokeColor="#886451"
+            app:strokeWidth="4dp"
+            android:onClick="decryptPassword"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/result_tag"
+            android:gravity="start"
+            android:layout_marginHorizontal="30dp"
+            android:autoSizeMinTextSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="@string/decrypted_password"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:id="@+id/result"
+            android:gravity="start"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="5dp"
+            android:autoSizeMinTextSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="@string/password"
+            android:layout_below="@id/result_tag"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/copy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copy_to_clipboard"
+            android:textColor="#886451"
+            android:textSize="20sp"
+            app:backgroundTint="@android:color/transparent"
+            app:cornerRadius="8dp"
+            android:layout_centerInParent="true"
+            app:rippleColor="#33AAAAAA"
+            android:paddingHorizontal="40sp"
+            android:enabled="false"
+            app:strokeColor="#886451"
+            app:strokeWidth="4dp"
+            android:onClick="copyToClipboard"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

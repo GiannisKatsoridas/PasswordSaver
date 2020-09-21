@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -11,12 +12,13 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 
 public class StoreActivity extends AppCompatActivity {
 
-    TextInputEditText storeName, storePassword;
+    TextInputEditText storeName, storePassword, storeKey;
     File file;
 
     @Override
@@ -26,6 +28,7 @@ public class StoreActivity extends AppCompatActivity {
 
         storeName = findViewById(R.id.storeName);
         storePassword = findViewById(R.id.storePassword);
+        storeKey = findViewById(R.id.storeKey);
 
         file = new File(getApplicationContext().getFilesDir(), "data");
     }
@@ -43,11 +46,14 @@ public class StoreActivity extends AppCompatActivity {
             FileOutputStream fos = new FileOutputStream(file, true);
             PrintStream printstream = new PrintStream(fos);
             printstream.println(storeName.getText().toString());
-            printstream.println(storePassword.getText().toString());
+            String encrypted = Encryption.Encrypt(storeKey.getText().toString(), storePassword.getText().toString());
+            printstream.println(encrypted);
 
+            printstream.close();
+            fos.close();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (IOException e) {
+            Toast.makeText(this, "There has been an error writing to the file. Password was NOT stored.", Toast.LENGTH_LONG).show();
         }
 
     }

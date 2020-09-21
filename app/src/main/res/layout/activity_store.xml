@@ -61,7 +61,8 @@
         android:layout_weight="45">
 
         <RelativeLayout
-            android:layout_margin="20sp"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginVertical="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/storeDescriptionLayout">
@@ -76,12 +77,32 @@
         </RelativeLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_margin="20sp"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/storeKeyLayout"
+            android:layout_below="@id/storeDescriptionLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/storeKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/key"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginVertical="10dp"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/storePasswordLayout"
             app:passwordToggleEnabled="true"
-            android:layout_below="@id/storeDescriptionLayout">
+            android:layout_below="@id/storeKeyLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/storePassword"

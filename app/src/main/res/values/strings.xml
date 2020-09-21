@@ -9,8 +9,16 @@
     <string name="back">Back</string>
     <string name="password">Password</string>
     <string name="description">Description</string>
-    <string name="set_name_and_password">Set the name of the stored password, which will help you identify it when retrieving it and then type the password itself.</string>
+    <string name="set_name_and_password">Set the name of the stored password, which will help you identify it when retrieving it and then type the password itself, along with the key for its encryption.</string>
     <string name="name">Name</string>
     <string name="store">Store</string>
-    <string name="disclaimer_store">Your password will be encrypted using your unique passcode and will then be stored under the name given. You can later decrypt it with your passcode to retrieve it.</string>
+    <string name="disclaimer_store">Your password will be encrypted using the given key and will then be stored under the name given. You can later decrypt it with the same key to retrieve it.</string>
+    <string name="remove_password">Remove a password</string>
+    <string name="key">Key</string>
+    <string name="disclaimer_retrieve">Choose the name of the password you want to retrieve.</string>
+    <string name="use_your_key">Use your key to decrypt the stored password and get your original password.</string>
+    <string name="decrypt">Decrypt</string>
+    <string name="decrypted_password">Decrypted Password</string>
+    <string name="copy_to_clipboard">Copy to Clipboard</string>
+    <string name="stored_password">Stored Password</string>
 </resources>
